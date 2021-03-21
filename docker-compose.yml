@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+  back:
+    #image: registry.cidsfrcutn.tech/arqutils/fastapi_microservice:latest
+    build: ./
+    ports:
+      - 8002:80
+    networks:
+      - programas_default
+
+networks:
+  programas_default:
+    external: true
